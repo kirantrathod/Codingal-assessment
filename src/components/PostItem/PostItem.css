@@ -1,0 +1,7 @@
+.post-item .container {
+  width: 200px;
+  height: 100%;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  overflow: hidden;
+}

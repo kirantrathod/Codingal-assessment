@@ -18,6 +18,7 @@ function Posts() {
       {postList.map((item, index) => {
         return (
           <PostItem
+            className="postItem"
             key={item.id}
             id={item.id}
             userId={item.userId}

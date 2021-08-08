@@ -1,3 +1,15 @@
 .posts {
-  padding-top: 100px;
+  padding: 50px 70px;
+}
+.posts .post-item {
+  margin: 10px 0;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 690px) {
+  .posts {
+    padding: 70px 40px;
+  }
+  .posts .post-item {
+    margin: 10px 0;
+  }
 }

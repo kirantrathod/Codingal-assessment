@@ -8,7 +8,7 @@ import { useCountDown } from "use-countdown-hook";
 
 import "./Navbar.css";
 function Navbar() {
-  const [isCurrentPageTrailLesson, setIsCurrentPageTrailLesson] =
+  const [isCurrentPageTrialLesson, setIsCurrentPageTrialLesson] =
     useState(false);
   const [currentScrren, setCurrentScreen] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -47,20 +47,20 @@ function Navbar() {
   const closeSideBar = (pathName) => {
     toggleHamburger();
     if (pathName === Routes.TRIAL_LESSON) {
-      setCurrentScreen("Trail Lesson [Grade 1-3]");
-      setIsCurrentPageTrailLesson(true);
+      setCurrentScreen("Trial Lesson [Grade 1-3]");
+      setIsCurrentPageTrialLesson(true);
       start();
     } else {
       setCurrentScreen("Posts");
-      setIsCurrentPageTrailLesson(false);
+      setIsCurrentPageTrialLesson(false);
     }
   };
   const wideLinkActivate = (pathName) => {
     if (pathName === Routes.TRIAL_LESSON) {
       start();
-      setIsCurrentPageTrailLesson(true);
+      setIsCurrentPageTrialLesson(true);
     } else {
-      setIsCurrentPageTrailLesson(false);
+      setIsCurrentPageTrialLesson(false);
     }
   };
   const openModal = () => {
@@ -102,7 +102,7 @@ function Navbar() {
               );
             })}
           </ul>
-          {isCurrentPageTrailLesson ? (
+          {isCurrentPageTrialLesson ? (
             <div className="nav-left-container">
               <p className="p-countdown-timer nav-left-container-items">
                 {mm}:{ss}
@@ -157,7 +157,7 @@ function Navbar() {
         </div>
         <div className="sm-headline-div">
           <h4 className="sm-current-screen-name">{currentScrren}</h4>
-          {isCurrentPageTrailLesson ? (
+          {isCurrentPageTrialLesson ? (
             <div className="sm-nav-left-container">
               <p className="sm-p-countdown-timer sm-nav-left-container-items">
                 {mm}:{ss}

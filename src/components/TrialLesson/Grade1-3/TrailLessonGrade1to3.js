@@ -10,7 +10,7 @@ function TrailLessonGrade1to3(props) {
     console.log("trial lesson is opened");
   }
 
-  return <div className="trail-lesson-grade-1to3">Inside Trail Lesson</div>;
+  return <div className="trail-lesson-grade-1to3">Inside Trial Lesson</div>;
 }
 
 export default TrailLessonGrade1to3;

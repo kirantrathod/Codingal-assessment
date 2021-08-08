@@ -24,18 +24,22 @@ function Navbar() {
       cName: "navlink-item",
     },
   ];
-  let isMenuOpen = false;
+  // let isMenuOpen = false;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleHamburger = () => {
+    console.log("inside toggle ismenuOpen:" + isMenuOpen);
     let menuBtn = document.querySelector(".menu-btn");
     let navLinks = document.querySelector(".navlinks");
     if (!isMenuOpen) {
       menuBtn.classList.add("open");
-      isMenuOpen = true;
+      // isMenuOpen = true;
+      setIsMenuOpen(true);
       navLinks.style.display = "block";
       navLinks.classList.add("active");
     } else {
       menuBtn.classList.remove("open");
-      isMenuOpen = false;
+      // isMenuOpen = false;
+      setIsMenuOpen(false);
       navLinks.style.display = "none";
       navLinks.classList.remove("active");
     }
@@ -68,11 +72,8 @@ function Navbar() {
       start();
     }
   });
-  // const endClassBtn = () => {
-  //   setTime(0);
-  // };
-  const [time, setTime] = useState(60 * 10000);
-  const [{ mm, ss }, { start, pause }] = useCountDown(time, {
+
+  const [{ mm, ss }, { start, pause }] = useCountDown(60 * 10000, {
     startImmediately: false,
   });
 
